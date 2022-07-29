@@ -1,6 +1,5 @@
 const { findBy } = require('./auth-model')
 
-
 const checkUserReg = async (req, res, next) => {
     try {
         const [user] = await findBy({ username: req.body.username })
