@@ -2,7 +2,7 @@ const db = require('../../data/dbConfig')
 
 function findBy(filter) {
     return db('users')
-    .select('username')
+    .select('username', 'password')
     .where(filter)
 }
 
@@ -18,12 +18,13 @@ async function add(user) {
 }
 
 
+//tried it wasnt working
 // let created_user
 // await db.transaction(async trx => {
 //     const [id] = await trx('users').insert({ username, password})
 //     created_user = id
 // })
-// return findBy(created_user)
+// return findById(created_user)
 
 
 module.exports = {
