@@ -2,7 +2,7 @@ const db = require('../../data/dbConfig')
 
 function findBy(filter) {
     return db('users')
-    .select('username', 'password')
+    .select('username')
     .where(filter)
 }
 

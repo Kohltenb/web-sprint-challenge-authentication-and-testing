@@ -18,7 +18,6 @@ server.use('/api/jokes', restrict, jokesRouter); // only logged-in users should 
 
 server.use((err, req, res, next) => { // eslint-disable-line
     res.status(err.status || 500).json({
-      customMessage: 'Oh No something went wrong',
       message: err.message,
       stack: err.stack,
     });
